@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 stages {
 
     stage('Checkout Code') {
@@ -51,6 +50,5 @@ post {
         echo 'Deployment Failed'
     }
 }
-```
 
 }
