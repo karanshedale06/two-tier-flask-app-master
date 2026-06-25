@@ -8,6 +8,11 @@ stages {
             checkout scm
         }
     }
+    stage('Clean Workspace') {
+        steps {
+            cleanWs()
+         }
+    }
 
     stage('Verify Docker') {
         steps {
@@ -39,6 +44,7 @@ stages {
             sh 'docker ps'
         }
     }
+    
 }
 
 post {
