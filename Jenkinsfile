@@ -2,17 +2,18 @@ pipeline {
 agent any
 
 stages {
+    stage('Clean Workspace') {
+        steps {
+            cleanWs()
+         }
+    }
 
     stage('Checkout Code') {
         steps {
             checkout scm
         }
     }
-    stage('Clean Workspace') {
-        steps {
-            cleanWs()
-         }
-    }
+    
 
     stage('Verify Docker') {
         steps {
